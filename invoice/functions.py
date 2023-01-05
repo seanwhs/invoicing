@@ -1,8 +1,6 @@
 from django.core.mail import EmailMessage
 from django.conf import settings
 
-
-
 def emailInvoiceClient(to_email, from_client, filepath):
     from_email = settings.EMAIL_HOST_USER
     subject = '[Sean\'s] Invoice Notification'

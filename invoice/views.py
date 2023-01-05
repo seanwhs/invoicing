@@ -291,7 +291,7 @@ def viewDocumentInvoice(request, slug):
       #Javascript delay is optional
 
     #Remember that location to wkhtmltopdf
-    config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
+    config = pdfkit.configuration(wkhtmltopdf="C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe")
 
     #IF you have CSS to add to template
     css1 = os.path.join(settings.CSS_LOCATION, 'assets', 'css', 'bootstrap.min.css')
@@ -361,7 +361,8 @@ def emailDocumentInvoice(request, slug):
       #Javascript delay is optional
 
     #Remember that location to wkhtmltopdf
-    config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
+    config = pdfkit.configuration(wkhtmltopdf="C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe")
+
 
     #Saving the File
     filepath = os.path.join(settings.MEDIA_ROOT, 'client_invoices')
@@ -398,33 +399,6 @@ def companySettings(request):
     company = Settings.objects.get(clientName='Sean\'s Lab')
     context = {'company': company}
     return render(request, 'invoice/company-settings.html', context)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ###
 ##

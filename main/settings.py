@@ -55,6 +55,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crispy_forms',
     'invoice',
+
+    'wkhtmltopdf',
 ]
 
 MIDDLEWARE = [
@@ -156,9 +158,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # SMTP Configure
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = ''
+EMAIL_HOST = 'smtp-mail.outlook.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
-DEFAULT_FROM_EMAIL = ''
+EMAIL_HOST_USER = 'seanwhs@hotmail.com'
+EMAIL_HOST_PASSWORD = 'freedom88'
+DEFAULT_FROM_EMAIL = 'Sean\'s Lab <SL@example.com>'
+
